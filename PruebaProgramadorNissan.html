@@ -1,0 +1,179 @@
+<html>
+    <head>
+      <title>Esta es una pagina web</title>
+    </head>
+    <body>    
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      
+      <center>
+      <h2>Prueba Programador</h2>
+      <br/>
+      <br/>
+      <table border style="text-align: center; width: 600px;border: 1px;">
+        <tr>
+          <td colspan="2">Examen nissan Torres Corzo</td>
+        </tr>
+        <tr>
+          <td>Postulante:</td>
+          <td><b>Ing. Maria Margarita Martinez Hernandez</b></td>
+        </tr>        
+        <tr>
+          <td>Nota:</td>
+          <td>Al ejecutar la página se realiza las impresiones del resultado de mi codigo en la linea de consola del navegador de google chrome, Obteniendo solo los resultados que en el examen  se solicitaban sin embargo, lo probe con varios casos, para que lo examines que funciona con el valor que se eliga utilizar.
+          Para ver el codigo favor de dar click derecho en el area cliente del navegador, al desplegarse el menu contextual debe seleccionalr la opcion de inspeccionar, o para verlo de una manera mas agradable favor de usar Sublime Text, saludos y cualqueir cosa estoy a tus ordenes.</td>
+        </tr>        
+      </table>
+      <script>
+
+        console.log("console.log(uno()); -> " + uno());
+        console.log("console.log(cinco(por(siete()))); -> " + cinco(por(siete())));
+        console.log("console.log(dos(mas(uno()))); -> " + dos(mas(uno())));
+        console.log("console.log(nueve(mas(cuatro()))); -> " + nueve(mas(cuatro())));
+        console.log("console.log(ocho(menos(tres(por(dos()))))); -> " + ocho(menos(tres(por(dos())))));
+        console.log("console.log(seis(entre(dos()))); -> " + (seis(entre(dos()))));
+ 
+        
+      //}); //Fin de document ready
+      //  alert("Hola");
+
+        function uno(item){
+          if(arguments.length==0)
+             return 1;
+          else{
+            var newItem = item;
+            newItem.push(uno());
+            return operacion(newItem);
+          }
+        }
+
+        function dos(item){
+          if(arguments.length==0)
+             return 2;
+          else{
+            var newItem = item;
+            newItem.push(dos());
+            return operacion(newItem);
+          }
+        }
+
+        function tres(item){
+          if(arguments.length==0)
+             return 3;
+          else{
+            var newItem = item;
+            newItem.push(tres());
+            return operacion(newItem);
+          }
+        }
+
+        function cuatro(item){
+          if(arguments.length==0)
+             return 4;
+          else{
+            var newItem = item;
+            newItem.push(cuatro());
+            return operacion(newItem);
+          }
+        }
+
+        function cinco(item){
+          if(arguments.length==0)
+             return 5;
+          else{
+            var newItem = item;
+            newItem.push(cinco());
+            return operacion(newItem);
+          }
+        }
+
+        function seis(item){
+          if(arguments.length==0)
+             return 6;
+          else{
+            var newItem = item;
+            newItem.push(seis());
+            return operacion(newItem);
+          }
+        }
+
+        function siete(item){
+          if(arguments.length==0)
+             return 7;
+          else{
+            var newItem = item;
+            newItem.push(siete());
+            return operacion(newItem);
+          }
+        }
+        function ocho(item){
+          if(arguments.length==0)
+             return 8;
+          else{
+            var newItem = item;
+            newItem.push(ocho());
+            return operacion(newItem);
+          }
+        }
+
+        function nueve(item){
+          if(arguments.length==0)
+             return 9;
+          else{
+            var newItem = item;
+            newItem.push(nueve());
+            return operacion(newItem);
+          }
+        }
+
+        function mas(item){
+          var r = ['+', item];
+          return r;
+        }
+
+        function por(item){
+          var r = ['*', item];
+          return r;
+        }
+
+        function menos(item){
+          var r = ['-', item];
+          return r;
+        }
+
+        function entre(item){
+          var r = ['/', item];
+          return r;
+        }
+
+        function operacion(item){//op, val1,val2
+            switch(item[0]){
+              case '+':
+                var sum = item[2] + item[1];
+                return sum;
+              break;
+
+              case'*':
+                var mult = item[2] * item[1];
+                return mult;
+              break;
+
+              case'-':
+                var menos = item[2] - item[1];
+                return menos;
+              break;
+
+              case'/':
+                var entre = item[2] / item[1];
+                return entre;
+              break;            
+            }          
+        }
+
+      </script>
+   </body>
+   </html>
